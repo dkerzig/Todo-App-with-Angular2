@@ -1,0 +1,117 @@
+/** BOX-SIZING **/
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: inherit; }
+
+
+/** TYPOGRAPHY **/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+html { font-size: 100%; }
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+}
+
+
+/** MAIN **/
+
+/* Body */
+body {
+    min-height: 100vh;
+    width: 100%;
+    padding: 1em;
+    background: #F6F8FA;
+    color: #47525D;
+}
+
+/* Headline */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+	line-height: 3;
+	padding-bottom: .5em;
+    color: #017EE5;
+    text-transform: uppercase;
+}
+
+/* Todo-Input */
+.todo-input {
+    width: 100%;
+    font-size: 2em;
+    padding: .3em .5em;
+    border-radius: 5px;
+    border: 2px #DEE2E5 solid;
+    color: #47525D;
+    margin-bottom: .5em;
+    transition: border .2s;
+}
+.todo-input:focus {
+    border: 2px #017EE5 solid;
+    outline: none;
+}
+.todo-input::-webkit-input-placeholder {
+    color: #DEE2E5;
+    font-weight: lighter;
+}
+
+/* Todo-Item (insert with animation) */
+.todo-item li {
+    font-size: 1.5em;
+    width: 100%;
+    line-height: 2;
+    background: rgba(255,255,255,1);
+    margin-top: 2px;
+    animation: flyIn .5s ease;
+}
+@-webkit-keyframes flyIn {
+    0% { transform: translateX(-110%); }
+    100% { transform: translateX(0); }
+}
+
+.todo-item li label>input {
+    width: 30px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    bottom: 2px;
+    position: relative;
+    margin-right: 0;
+}
+.todo-item li label>span {
+    display: inline-block;
+    -webkit-user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Border-Radius for first and last child */
+.todo-item:first-child li {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.todo-item:last-child li {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Mark Todos as done (with animation) */
+.todo-item input:checked + span {
+    /*text-decoration: line-through;*/
+    color: #DEE2E5;
+    transition: color .3s ease;
+}
+.todo-item input:checked + span:after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    height: 2px;
+    width: calc(100% + 4px);
+    background: #DEE2E5;
+    display: block;
+    animation: lineThrough .3s ease;
+    transform-origin: center left;
+}
+@-webkit-keyframes lineThrough {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}

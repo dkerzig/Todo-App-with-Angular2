@@ -1,0 +1,21 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "angular2": "^2.0.0-beta.3",
+    "browser-sync": "^2.11.1",
+    "es6-shim": "^0.34.2",
+    "gulp": "^3.9.0",
+    "rx": "^4.0.7",
+    "rxjs": "^5.0.0-beta.1",
+    "systemjs": "^0.19.20",
+    "typescript": "^1.7.5"
+  }
+}
