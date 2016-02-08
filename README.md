@@ -1,4 +1,7 @@
 # Simple Todo-App with Angular2
+![alt text](./Todo-App.gif "Todo-App in Action")
+
+
 This is a very basic example of a Todo application with Angular2 (Beta). It demonstrates features like:
 
 - handling events (`keyup`)
