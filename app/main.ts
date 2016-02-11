@@ -1,12 +1,12 @@
 import {bootstrap} from 'angular2/platform/browser'
 import {Component} from 'angular2/core';
 
-/* Component-Declaration of our Todo-App. */
+/* Component-Declaration of our Angular-App. */
 @Component({
-    selector: 'todo-app',
+    selector: '',
     template: ``
 })
-class TodoApp {}
+class App {}
 
-/* This is a Angular-function which initializes the whole thing */
-bootstrap(TodoApp);
+/* Initialize the whole thing */
+bootstrap(App);
