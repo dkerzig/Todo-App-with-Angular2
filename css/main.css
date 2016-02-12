@@ -55,14 +55,14 @@ input:not([type=checkbox])::-webkit-input-placeholder {
 }
 
 /* Todo-Item (insert with animation) */
-.todo-item li {
+todo-item li {
     font-size: 1.5em;
     width: 100%;
     line-height: 2;
     background: rgba(255,255,255,1);
     margin-top: 2px;
 }
-.todo-item li label>input {
+todo-item li label>input {
     width: 30px;
     margin-left: 15px;
     margin-bottom: 0;
@@ -70,7 +70,7 @@ input:not([type=checkbox])::-webkit-input-placeholder {
     position: relative;
     margin-right: 0;
 }
-.todo-item li label>span {
+todo-item li label>span {
     display: inline-block;
     -webkit-user-select: none;
     cursor: pointer;
@@ -78,11 +78,11 @@ input:not([type=checkbox])::-webkit-input-placeholder {
 }
 
 /* Border-Radius for first and last child */
-.todo-item:first-child li {
+todo-item:first-child li {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.todo-item:last-child li {
+todo-item:last-child li {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
